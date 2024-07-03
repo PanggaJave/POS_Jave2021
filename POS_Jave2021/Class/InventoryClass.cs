@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS_Jave2021.Model;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -73,6 +74,54 @@ namespace POS_Jave2021.Class
             dt.Columns.Add("IsCancel");
             dt.Columns.Add("Remarks");
             return dt;
+        }
+
+        public DataTable getlistOfAllInventory()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string query = "SELECT * FROM [tbl_inv]";
+                using (OleDbCommand command = new OleDbCommand(query, _conn))
+                {
+                    _conn.Open();
+                    OleDbDataAdapter da = new OleDbDataAdapter(command);
+                    da.Fill(dt);
+                    _conn.Close();
+                }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public DataTable getlistOfProductList() 
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string query = "SELECT * FROM [tbl_products]";
+                using (OleDbCommand command = new OleDbCommand(query, _conn))
+                {
+                    _conn.Open();
+                    OleDbDataAdapter da = new OleDbDataAdapter(command);
+                    da.Fill(dt);
+                    _conn.Close();
+                }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void updateInventory(InventoryModel model)
+        {
+
         }
     }
 }

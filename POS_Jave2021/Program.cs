@@ -1,6 +1,7 @@
 ﻿using POS_Jave2021.Class;
 using POS_Jave2021.Model;
 using POS_Jave2021.View;
+using POS_Jave2021.View.Cashier;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,8 @@ namespace POS_Jave2021
             };
             UserLogin ul = new UserLogin();
             var dtuser = ul.login(model, conn);
-            Application.Run(new CashierHome(dtuser, conn));
+            //Application.Run(new CashierHome(dtuser, conn));
+            Application.Run(new Inventory(dtuser, conn));
         }
     }
 }

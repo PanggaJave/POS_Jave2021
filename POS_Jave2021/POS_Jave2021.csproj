@@ -124,6 +124,12 @@
     <Compile Include="Model\shiftmodel.cs" />
     <Compile Include="Model\shiftOffModel.cs" />
     <Compile Include="Model\userModel.cs" />
+    <Compile Include="View\Cashier\AddUpdateInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cashier\AddUpdateInventory.Designer.cs">
+      <DependentUpon>AddUpdateInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Cashier\AdminCredential.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\Cashier\AddUpdateInventory.resx">
+      <DependentUpon>AddUpdateInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Cashier\AdminCredential.resx">
       <DependentUpon>AdminCredential.cs</DependentUpon>
     </EmbeddedResource>

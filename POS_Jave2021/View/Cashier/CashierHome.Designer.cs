@@ -46,6 +46,7 @@
             this.btn_ready = new System.Windows.Forms.Button();
             this.btn_void = new System.Windows.Forms.Button();
             this.btnDebtCredit = new System.Windows.Forms.Button();
+            this.btnInventory = new System.Windows.Forms.Button();
             this.rtb_logs = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbl_ordersCount = new System.Windows.Forms.Label();
@@ -113,6 +114,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.lblInvSold_ProductID = new System.Windows.Forms.Label();
+            this.lblInvSold_Cost = new System.Windows.Forms.Label();
+            this.lblInvSold_QTY = new System.Windows.Forms.Label();
+            this.lblInvSold_TDT = new System.Windows.Forms.Label();
+            this.lblInvSold_IsCancel = new System.Windows.Forms.Label();
+            this.lblInvSold_Price = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -123,13 +130,6 @@
             this.lbl_username = new System.Windows.Forms.Label();
             this.lbl_userfullname = new System.Windows.Forms.Label();
             this.lbl_usertype = new System.Windows.Forms.Label();
-            this.lblInvSold_ProductID = new System.Windows.Forms.Label();
-            this.lblInvSold_Cost = new System.Windows.Forms.Label();
-            this.lblInvSold_QTY = new System.Windows.Forms.Label();
-            this.lblInvSold_TDT = new System.Windows.Forms.Label();
-            this.lblInvSold_IsCancel = new System.Windows.Forms.Label();
-            this.lblInvSold_Price = new System.Windows.Forms.Label();
-            this.btnInventory = new System.Windows.Forms.Button();
             btn_refresh = new System.Windows.Forms.Button();
             this.CashierTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -177,7 +177,7 @@
             this.CashierTab.Controls.Add(this.tabPage1);
             this.CashierTab.Controls.Add(this.tabPage2);
             this.CashierTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CashierTab.Location = new System.Drawing.Point(1, 1);
+            this.CashierTab.Location = new System.Drawing.Point(1, 20);
             this.CashierTab.Name = "CashierTab";
             this.CashierTab.SelectedIndex = 0;
             this.CashierTab.Size = new System.Drawing.Size(1543, 691);
@@ -375,6 +375,16 @@
             this.btnDebtCredit.Text = "Debt Credit (F9)";
             this.btnDebtCredit.UseVisualStyleBackColor = true;
             this.btnDebtCredit.Click += new System.EventHandler(this.btnDebtCredit_Click);
+            // 
+            // btnInventory
+            // 
+            this.btnInventory.Location = new System.Drawing.Point(3, 91);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(206, 38);
+            this.btnInventory.TabIndex = 5;
+            this.btnInventory.Text = "Inventory";
+            this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // rtb_logs
             // 
@@ -839,7 +849,7 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.63235F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.36765F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
             this.tableLayoutPanel11.Controls.Add(this.label23, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.label19, 0, 2);
             this.tableLayoutPanel11.Controls.Add(this.label22, 0, 1);
@@ -904,7 +914,7 @@
             this.lbl_posCash.AutoSize = true;
             this.lbl_posCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posCash.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posCash.Location = new System.Drawing.Point(110, 0);
+            this.lbl_posCash.Location = new System.Drawing.Point(109, 0);
             this.lbl_posCash.Name = "lbl_posCash";
             this.lbl_posCash.Size = new System.Drawing.Size(18, 20);
             this.lbl_posCash.TabIndex = 12;
@@ -915,7 +925,7 @@
             this.lbl_posPrice.AutoSize = true;
             this.lbl_posPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posPrice.Location = new System.Drawing.Point(110, 28);
+            this.lbl_posPrice.Location = new System.Drawing.Point(109, 28);
             this.lbl_posPrice.Name = "lbl_posPrice";
             this.lbl_posPrice.Size = new System.Drawing.Size(18, 20);
             this.lbl_posPrice.TabIndex = 13;
@@ -926,7 +936,7 @@
             this.lbl_posChange.AutoSize = true;
             this.lbl_posChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posChange.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posChange.Location = new System.Drawing.Point(110, 58);
+            this.lbl_posChange.Location = new System.Drawing.Point(109, 58);
             this.lbl_posChange.Name = "lbl_posChange";
             this.lbl_posChange.Size = new System.Drawing.Size(18, 20);
             this.lbl_posChange.TabIndex = 14;
@@ -937,7 +947,7 @@
             this.lbl_posTDT.AutoSize = true;
             this.lbl_posTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posTDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posTDT.Location = new System.Drawing.Point(390, 0);
+            this.lbl_posTDT.Location = new System.Drawing.Point(389, 0);
             this.lbl_posTDT.Name = "lbl_posTDT";
             this.lbl_posTDT.Size = new System.Drawing.Size(18, 20);
             this.lbl_posTDT.TabIndex = 15;
@@ -948,7 +958,7 @@
             this.lbl_posIsCancel.AutoSize = true;
             this.lbl_posIsCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posIsCancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posIsCancel.Location = new System.Drawing.Point(390, 28);
+            this.lbl_posIsCancel.Location = new System.Drawing.Point(389, 28);
             this.lbl_posIsCancel.Name = "lbl_posIsCancel";
             this.lbl_posIsCancel.Size = new System.Drawing.Size(18, 20);
             this.lbl_posIsCancel.TabIndex = 17;
@@ -959,7 +969,7 @@
             this.lbl_posQTY.AutoSize = true;
             this.lbl_posQTY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posQTY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posQTY.Location = new System.Drawing.Point(110, 95);
+            this.lbl_posQTY.Location = new System.Drawing.Point(109, 95);
             this.lbl_posQTY.Name = "lbl_posQTY";
             this.lbl_posQTY.Size = new System.Drawing.Size(18, 20);
             this.lbl_posQTY.TabIndex = 18;
@@ -981,7 +991,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label26.Location = new System.Drawing.Point(218, 0);
+            this.label26.Location = new System.Drawing.Point(217, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(86, 20);
             this.label26.TabIndex = 10;
@@ -992,7 +1002,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(218, 28);
+            this.label27.Location = new System.Drawing.Point(217, 28);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(75, 20);
             this.label27.TabIndex = 11;
@@ -1003,7 +1013,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label25.Location = new System.Drawing.Point(218, 58);
+            this.label25.Location = new System.Drawing.Point(217, 58);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(107, 20);
             this.label25.TabIndex = 19;
@@ -1014,7 +1024,7 @@
             this.lbl_posIsDeptCredit.AutoSize = true;
             this.lbl_posIsDeptCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posIsDeptCredit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posIsDeptCredit.Location = new System.Drawing.Point(390, 58);
+            this.lbl_posIsDeptCredit.Location = new System.Drawing.Point(389, 58);
             this.lbl_posIsDeptCredit.Name = "lbl_posIsDeptCredit";
             this.lbl_posIsDeptCredit.Size = new System.Drawing.Size(18, 20);
             this.lbl_posIsDeptCredit.TabIndex = 20;
@@ -1025,7 +1035,7 @@
             this.adasdasdasdadasd.AutoSize = true;
             this.adasdasdasdadasd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adasdasdasdadasd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.adasdasdasdadasd.Location = new System.Drawing.Point(218, 95);
+            this.adasdasdasdadasd.Location = new System.Drawing.Point(217, 95);
             this.adasdasdasdadasd.Name = "adasdasdasdadasd";
             this.adasdasdasdadasd.Size = new System.Drawing.Size(64, 20);
             this.adasdasdasdadasd.TabIndex = 21;
@@ -1037,7 +1047,7 @@
             this.lbl_posUserID.AutoSize = true;
             this.lbl_posUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posUserID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posUserID.Location = new System.Drawing.Point(390, 95);
+            this.lbl_posUserID.Location = new System.Drawing.Point(389, 95);
             this.lbl_posUserID.Name = "lbl_posUserID";
             this.lbl_posUserID.Size = new System.Drawing.Size(18, 20);
             this.lbl_posUserID.TabIndex = 22;
@@ -1113,7 +1123,7 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.63235F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.36765F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
             this.tableLayoutPanel10.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.label16, 0, 2);
             this.tableLayoutPanel10.Controls.Add(this.label17, 0, 1);
@@ -1174,7 +1184,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(331, 0);
+            this.label18.Location = new System.Drawing.Point(330, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(45, 20);
             this.label18.TabIndex = 7;
@@ -1185,7 +1195,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(331, 70);
+            this.label20.Location = new System.Drawing.Point(330, 70);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(79, 20);
             this.label20.TabIndex = 9;
@@ -1196,11 +1206,77 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(331, 33);
+            this.label21.Location = new System.Drawing.Point(330, 33);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(86, 20);
             this.label21.TabIndex = 10;
             this.label21.Text = "Date Time:";
+            // 
+            // lblInvSold_ProductID
+            // 
+            this.lblInvSold_ProductID.AutoSize = true;
+            this.lblInvSold_ProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvSold_ProductID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInvSold_ProductID.Location = new System.Drawing.Point(165, 0);
+            this.lblInvSold_ProductID.Name = "lblInvSold_ProductID";
+            this.lblInvSold_ProductID.Size = new System.Drawing.Size(18, 20);
+            this.lblInvSold_ProductID.TabIndex = 11;
+            this.lblInvSold_ProductID.Text = "0";
+            // 
+            // lblInvSold_Cost
+            // 
+            this.lblInvSold_Cost.AutoSize = true;
+            this.lblInvSold_Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvSold_Cost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInvSold_Cost.Location = new System.Drawing.Point(165, 33);
+            this.lblInvSold_Cost.Name = "lblInvSold_Cost";
+            this.lblInvSold_Cost.Size = new System.Drawing.Size(18, 20);
+            this.lblInvSold_Cost.TabIndex = 12;
+            this.lblInvSold_Cost.Text = "0";
+            // 
+            // lblInvSold_QTY
+            // 
+            this.lblInvSold_QTY.AutoSize = true;
+            this.lblInvSold_QTY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvSold_QTY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInvSold_QTY.Location = new System.Drawing.Point(502, 0);
+            this.lblInvSold_QTY.Name = "lblInvSold_QTY";
+            this.lblInvSold_QTY.Size = new System.Drawing.Size(18, 20);
+            this.lblInvSold_QTY.TabIndex = 13;
+            this.lblInvSold_QTY.Text = "0";
+            // 
+            // lblInvSold_TDT
+            // 
+            this.lblInvSold_TDT.AutoSize = true;
+            this.lblInvSold_TDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvSold_TDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInvSold_TDT.Location = new System.Drawing.Point(502, 33);
+            this.lblInvSold_TDT.Name = "lblInvSold_TDT";
+            this.lblInvSold_TDT.Size = new System.Drawing.Size(18, 20);
+            this.lblInvSold_TDT.TabIndex = 14;
+            this.lblInvSold_TDT.Text = "_";
+            // 
+            // lblInvSold_IsCancel
+            // 
+            this.lblInvSold_IsCancel.AutoSize = true;
+            this.lblInvSold_IsCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvSold_IsCancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInvSold_IsCancel.Location = new System.Drawing.Point(502, 70);
+            this.lblInvSold_IsCancel.Name = "lblInvSold_IsCancel";
+            this.lblInvSold_IsCancel.Size = new System.Drawing.Size(18, 20);
+            this.lblInvSold_IsCancel.TabIndex = 15;
+            this.lblInvSold_IsCancel.Text = "0";
+            // 
+            // lblInvSold_Price
+            // 
+            this.lblInvSold_Price.AutoSize = true;
+            this.lblInvSold_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvSold_Price.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInvSold_Price.Location = new System.Drawing.Point(165, 70);
+            this.lblInvSold_Price.Name = "lblInvSold_Price";
+            this.lblInvSold_Price.Size = new System.Drawing.Size(18, 20);
+            this.lblInvSold_Price.TabIndex = 16;
+            this.lblInvSold_Price.Text = "0";
             // 
             // groupBox3
             // 
@@ -1324,88 +1400,12 @@
             this.lbl_usertype.TabIndex = 10;
             this.lbl_usertype.Text = "User Type";
             // 
-            // lblInvSold_ProductID
-            // 
-            this.lblInvSold_ProductID.AutoSize = true;
-            this.lblInvSold_ProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvSold_ProductID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInvSold_ProductID.Location = new System.Drawing.Point(166, 0);
-            this.lblInvSold_ProductID.Name = "lblInvSold_ProductID";
-            this.lblInvSold_ProductID.Size = new System.Drawing.Size(18, 20);
-            this.lblInvSold_ProductID.TabIndex = 11;
-            this.lblInvSold_ProductID.Text = "0";
-            // 
-            // lblInvSold_Cost
-            // 
-            this.lblInvSold_Cost.AutoSize = true;
-            this.lblInvSold_Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvSold_Cost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInvSold_Cost.Location = new System.Drawing.Point(166, 33);
-            this.lblInvSold_Cost.Name = "lblInvSold_Cost";
-            this.lblInvSold_Cost.Size = new System.Drawing.Size(18, 20);
-            this.lblInvSold_Cost.TabIndex = 12;
-            this.lblInvSold_Cost.Text = "0";
-            // 
-            // lblInvSold_QTY
-            // 
-            this.lblInvSold_QTY.AutoSize = true;
-            this.lblInvSold_QTY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvSold_QTY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInvSold_QTY.Location = new System.Drawing.Point(503, 0);
-            this.lblInvSold_QTY.Name = "lblInvSold_QTY";
-            this.lblInvSold_QTY.Size = new System.Drawing.Size(18, 20);
-            this.lblInvSold_QTY.TabIndex = 13;
-            this.lblInvSold_QTY.Text = "0";
-            // 
-            // lblInvSold_TDT
-            // 
-            this.lblInvSold_TDT.AutoSize = true;
-            this.lblInvSold_TDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvSold_TDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInvSold_TDT.Location = new System.Drawing.Point(503, 33);
-            this.lblInvSold_TDT.Name = "lblInvSold_TDT";
-            this.lblInvSold_TDT.Size = new System.Drawing.Size(18, 20);
-            this.lblInvSold_TDT.TabIndex = 14;
-            this.lblInvSold_TDT.Text = "_";
-            // 
-            // lblInvSold_IsCancel
-            // 
-            this.lblInvSold_IsCancel.AutoSize = true;
-            this.lblInvSold_IsCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvSold_IsCancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInvSold_IsCancel.Location = new System.Drawing.Point(503, 70);
-            this.lblInvSold_IsCancel.Name = "lblInvSold_IsCancel";
-            this.lblInvSold_IsCancel.Size = new System.Drawing.Size(18, 20);
-            this.lblInvSold_IsCancel.TabIndex = 15;
-            this.lblInvSold_IsCancel.Text = "0";
-            // 
-            // lblInvSold_Price
-            // 
-            this.lblInvSold_Price.AutoSize = true;
-            this.lblInvSold_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvSold_Price.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInvSold_Price.Location = new System.Drawing.Point(166, 70);
-            this.lblInvSold_Price.Name = "lblInvSold_Price";
-            this.lblInvSold_Price.Size = new System.Drawing.Size(18, 20);
-            this.lblInvSold_Price.TabIndex = 16;
-            this.lblInvSold_Price.Text = "0";
-            // 
-            // btnInventory
-            // 
-            this.btnInventory.Location = new System.Drawing.Point(3, 91);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(206, 38);
-            this.btnInventory.TabIndex = 5;
-            this.btnInventory.Text = "Inventory";
-            this.btnInventory.UseVisualStyleBackColor = true;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
-            // 
             // CashierHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ClientSize = new System.Drawing.Size(1556, 704);
+            this.ClientSize = new System.Drawing.Size(1556, 713);
             this.Controls.Add(this.CashierTab);
             this.KeyPreview = true;
             this.Name = "CashierHome";
