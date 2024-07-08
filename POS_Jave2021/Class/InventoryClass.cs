@@ -119,9 +119,14 @@ namespace POS_Jave2021.Class
             }
         }
 
-        public void updateInventory(InventoryModel model)
+        public ResponseModel updateInventory(InventoryModel model)
         {
+            return new ResponseModel();
+        }
 
+        public ResponseModel insertInventory(InventoryModel model)
+        {
+            return new ResponseModel();
         }
     }
 }

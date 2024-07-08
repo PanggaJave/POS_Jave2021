@@ -119,6 +119,7 @@
     <Compile Include="Model\classConnection.cs" />
     <Compile Include="Model\ClassModel.cs" />
     <Compile Include="Model\customOrderLayoutModel.cs" />
+    <Compile Include="Model\InventoryModel.cs" />
     <Compile Include="Model\PosModel.cs" />
     <Compile Include="Model\ResponseModel.cs" />
     <Compile Include="Model\shiftmodel.cs" />
