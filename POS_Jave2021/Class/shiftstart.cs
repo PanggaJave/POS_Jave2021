@@ -50,7 +50,7 @@ namespace POS_Jave2021.Class
                             is_catch = false,
                             is_Success = false,
                             message = "Unsuccessfully Inserted!!",
-                            title = "Success"
+                            title = "Error!"
                         };
                     }
                 }

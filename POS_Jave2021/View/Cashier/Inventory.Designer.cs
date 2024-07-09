@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.txtSearchProduct = new System.Windows.Forms.TextBox();
+            this.btnAddProduct = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -86,6 +87,7 @@
             this.dgvInvList.ReadOnly = true;
             this.dgvInvList.Size = new System.Drawing.Size(633, 488);
             this.dgvInvList.TabIndex = 1;
+            this.dgvInvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvList_CellContentClick);
             // 
             // txtSearchInv
             // 
@@ -98,6 +100,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnAddProduct);
             this.groupBox2.Controls.Add(this.btnSearchProduct);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dgvProductList);
@@ -148,6 +151,15 @@
             this.txtSearchProduct.TabIndex = 1;
             this.txtSearchProduct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchProduct_KeyDown);
             // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.Location = new System.Drawing.Point(563, 565);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(104, 38);
+            this.btnAddProduct.TabIndex = 5;
+            this.btnAddProduct.Text = "Add";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvProductList;
         private System.Windows.Forms.TextBox txtSearchProduct;
+        private System.Windows.Forms.Button btnAddProduct;
     }
 }

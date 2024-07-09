@@ -22,13 +22,14 @@ namespace POS_Jave2021.View.Cashier
         bool dtgribBTN = true;
         OleDbConnection _conn;
         public InventoryClass _invClass;
-        public AddUpdateInventory(bool isUpdate, DataTable invDetails, DataTable productlist, string invID)
+        public AddUpdateInventory(bool isUpdate, DataTable invDetails, DataTable productlist, string invID, OleDbConnection conn)
         {
             InitializeComponent();
             _IsUpdate = isUpdate;
             _invDetails = invDetails;
             _productList = productlist;
             _InvID = invID;
+            _conn = conn;
             _invClass = new InventoryClass(_conn);
         }
 
@@ -123,27 +124,52 @@ namespace POS_Jave2021.View.Cashier
         {
             try
             {
-                var model = new InventoryModel();
-                model.inv_id = _InvID;
-                model.product_id = txtProductID.Text;
-                model.price_cost = decimal.Parse(txtPriceCost.Text);
-                model.selling_price = decimal.Parse(txtSellingPrice.Text);
-                model.udt   = DateTime.Now;
-                model.available_inv = int.Parse(txtProductTotalInventory.Text);
-
-                if(_IsUpdate) // update
+                if(dgv_ProductDetails.Rows.Count > 0)
                 {
+                    var model = new InventoryModel();
+                    model.inv_id = _InvID;
+                    model.product_id = txtProductID.Text;
+                    model.price_cost = decimal.Parse(txtPriceCost.Text);
+                    model.selling_price = decimal.Parse(txtSellingPrice.Text);
+                    model.udt = DateTime.Now;
+                    model.available_inv = Int32.Parse(txtProductNewInventory.Text);
 
+                    if (_IsUpdate) // update
+                    {
+                        var res = _invClass.updateInventory(model);
+                        if (res.is_Success)
+                        {
+                            MessageBox.Show(res.message, res.title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(res.message, res.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else // add
+                    {
+                        var res = _invClass.insertInventory(model);
+                        if (res.is_Success)
+                        {
+                            MessageBox.Show(res.message, res.title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(res.message, res.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
-                else // add
+                else
                 {
-
-                }
+                    MessageBox.Show("Please select product first!", "Warning!");
+                }               
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

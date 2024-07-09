@@ -80,14 +80,15 @@ namespace POS_Jave2021.View.Cashier
                 if (rets.Any())
                 {
                     dt = rets.CopyToDataTable();
-                    var frm = new AddUpdateInventory(false, dt, _productData, txtSearchInv.Text.Trim());
+                    var frm = new AddUpdateInventory(true, dt, _productData, txtSearchInv.Text.Trim(), _conn);
                     frm.ShowDialog();
                 }
                 else
                 {
-                    var frm = new AddUpdateInventory(false, null, _productData, txtSearchInv.Text.Trim());
+                    var frm = new AddUpdateInventory(false, null, _productData, txtSearchInv.Text.Trim(), _conn);
                     frm.ShowDialog();
                 }
+                Inventory_Load(null, null);
             }
             catch (Exception ex)
             {
@@ -101,6 +102,7 @@ namespace POS_Jave2021.View.Cashier
             if (e.KeyCode == Keys.Enter)
             {
                 btnSearchInv_Click(null, null);
+                txtSearchInv.Text = string.Empty; txtSearchInv.Focus();
             }
 
         }
@@ -112,7 +114,33 @@ namespace POS_Jave2021.View.Cashier
 
         private void btnSearchProduct_Click(object sender, EventArgs e)
         {
+        }
 
+        private void dgvInvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                var id = dgvInvList.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtSearchInv.Text = id;
+                btnSearchInv_Click(null, null);
+                txtSearchInv.Text = string.Empty;
+                //var rets = from prd in _productList.AsEnumerable()
+                //           where prd.Field<string>("item_id") == id
+                //           select prd;
+                //if (rets.Any())
+                //{
+                //    DataTable dt = rets.CopyToDataTable();
+                //    dgvInvList.DataSource = dt;
+                //    dgvInvList(rets.CopyToDataTable());
+                //}
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //btnSearchInv_Click(null, null);
         }
     }
 }

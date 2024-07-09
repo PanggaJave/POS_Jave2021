@@ -121,12 +121,113 @@ namespace POS_Jave2021.Class
 
         public ResponseModel updateInventory(InventoryModel model)
         {
-            return new ResponseModel();
+            try
+            {
+                string query = "UPDATE [tbl_inv] set " +
+                    "product_id = @product_id, " +
+                    "price_cost = @price_cost, " +
+                    "selling_price = @selling_price, " +
+                    "overall_inv = overall_inv + @available_inv, " +
+                    "available_inv = available_inv + @available_inv, " +
+                    "udt = @tdt " +
+                    "Where inv_id = @inv_id";
+                using (OleDbCommand command = new OleDbCommand(query, _conn))
+                {
+                    _conn.Open();
+                    command.Parameters.AddWithValue("@product_id", model.product_id);
+                    command.Parameters.AddWithValue("@price_cost", model.price_cost);
+                    command.Parameters.AddWithValue("@selling_price", model.selling_price);
+                    command.Parameters.AddWithValue("@available_inv", model.available_inv);
+                    command.Parameters.AddWithValue("@tdt", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                    command.Parameters.AddWithValue("@inv_id", model.inv_id);
+                    int rowsAffected = command.ExecuteNonQuery();
+                    _conn.Close();
+                    if (rowsAffected > 0)
+                    {
+                        return new ResponseModel
+                        {
+                            is_catch = false,
+                            is_Success = true,
+                            message = "Updated Successfully!",
+                            title = "Success!",
+                        };
+                    }
+                    else
+                    {
+                        return new ResponseModel
+                        {
+                            is_catch = false,
+                            is_Success = false,
+                            message = "Update Unsuccessfully!",
+                            title = "Error!"
+                        };                       
+                    }
+                }                    
+            }
+            catch (Exception ex)
+            {
+                return new ResponseModel {
+                    is_catch = true,
+                    is_Success = false,
+                    message = ex.Message,
+                    title = "Catch Error!",                    
+                };
+            }
         }
 
         public ResponseModel insertInventory(InventoryModel model)
         {
-            return new ResponseModel();
+            try
+            {
+                string query = "INSERT INTO [tbl_inv] " +
+                    "(inv_id, product_id, price_cost, selling_price, cdt, udt, overall_inv, sold_inv, available_inv) " +
+                    "VALUES " +
+                    "(@inv_id, @product_id, @price_cost, @selling_price, @cdt, @udt, @overall_inv, 0, @available_inv)";
+                using (OleDbCommand command = new OleDbCommand(query, _conn))
+                {
+                    _conn.Open();
+                    command.Parameters.AddWithValue("@inv_id", model.inv_id);
+                    command.Parameters.AddWithValue("@product_id", model.product_id);
+                    command.Parameters.AddWithValue("@price_cost", model.price_cost);
+                    command.Parameters.AddWithValue("@selling_price", model.selling_price);
+                    command.Parameters.AddWithValue("@cdt", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                    command.Parameters.AddWithValue("@udt", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                    command.Parameters.AddWithValue("@overall_inv", model.available_inv);
+                    command.Parameters.AddWithValue("@available_inv", model.available_inv);
+                    int rowsAffected = command.ExecuteNonQuery();
+                    _conn.Close();
+                    if (rowsAffected > 0)
+                    {
+                        return new ResponseModel
+                        {
+                            is_catch = false,
+                            is_Success = true,
+                            message = "Insert Successfully!",
+                            title = "Success!",
+                        };
+                    }
+                    else
+                    {
+                        return new ResponseModel
+                        {
+                            is_catch = false,
+                            is_Success = false,
+                            message = "Insert Unsuccessfully!",
+                            title = "Error!"
+                        };
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return new ResponseModel
+                {
+                    is_catch = true,
+                    is_Success = false,
+                    message = ex.Message,
+                    title = "Catch Error!",
+                };
+            }
         }
     }
 }

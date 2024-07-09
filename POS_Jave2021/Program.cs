@@ -33,7 +33,9 @@ namespace POS_Jave2021
             UserLogin ul = new UserLogin();
             var dtuser = ul.login(model, conn);
             //Application.Run(new CashierHome(dtuser, conn));
-            Application.Run(new Inventory(dtuser, conn));
+            Application.Run(new Inventory(dtuser, conn)); //ValidateArguments
+            //Application.Run(new ValidateArguments()); //ValidateArguments
+
         }
     }
 }
