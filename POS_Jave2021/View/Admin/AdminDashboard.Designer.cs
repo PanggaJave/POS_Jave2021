@@ -30,15 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listOfUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pointOfSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listOfInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productDeletedListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.activeUserListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inactiveUserListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listOfUsersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,9 +43,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inventoryToolStripMenuItem,
-            this.productToolStripMenuItem,
             this.listOfUsersToolStripMenuItem,
-            this.pointOfSalesToolStripMenuItem});
+            this.pointOfSalesToolStripMenuItem,
+            this.salesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1203, 24);
@@ -63,21 +60,11 @@
             this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             // 
-            // productToolStripMenuItem
-            // 
-            this.productToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productListToolStripMenuItem,
-            this.productDeletedListToolStripMenuItem});
-            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.productToolStripMenuItem.Text = "Product";
-            // 
             // listOfUsersToolStripMenuItem
             // 
             this.listOfUsersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.activeUserListToolStripMenuItem,
-            this.inactiveUserListToolStripMenuItem,
-            this.addUserToolStripMenuItem});
+            this.addUserToolStripMenuItem,
+            this.listOfUsersToolStripMenuItem1});
             this.listOfUsersToolStripMenuItem.Name = "listOfUsersToolStripMenuItem";
             this.listOfUsersToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.listOfUsersToolStripMenuItem.Text = "List Of Users";
@@ -96,35 +83,25 @@
             this.listOfInventoryToolStripMenuItem.Text = "List Of Inventory";
             this.listOfInventoryToolStripMenuItem.Click += new System.EventHandler(this.listOfInventoryToolStripMenuItem_Click);
             // 
-            // productListToolStripMenuItem
-            // 
-            this.productListToolStripMenuItem.Name = "productListToolStripMenuItem";
-            this.productListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.productListToolStripMenuItem.Text = "Product List";
-            // 
-            // productDeletedListToolStripMenuItem
-            // 
-            this.productDeletedListToolStripMenuItem.Name = "productDeletedListToolStripMenuItem";
-            this.productDeletedListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.productDeletedListToolStripMenuItem.Text = "Product Deleted List";
-            // 
-            // activeUserListToolStripMenuItem
-            // 
-            this.activeUserListToolStripMenuItem.Name = "activeUserListToolStripMenuItem";
-            this.activeUserListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.activeUserListToolStripMenuItem.Text = "Active User List";
-            // 
-            // inactiveUserListToolStripMenuItem
-            // 
-            this.inactiveUserListToolStripMenuItem.Name = "inactiveUserListToolStripMenuItem";
-            this.inactiveUserListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.inactiveUserListToolStripMenuItem.Text = "Inactive User List";
-            // 
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
             this.addUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addUserToolStripMenuItem.Text = "Add User";
+            this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
+            // 
+            // listOfUsersToolStripMenuItem1
+            // 
+            this.listOfUsersToolStripMenuItem1.Name = "listOfUsersToolStripMenuItem1";
+            this.listOfUsersToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listOfUsersToolStripMenuItem1.Text = "List Of Users";
+            this.listOfUsersToolStripMenuItem1.Click += new System.EventHandler(this.listOfUsersToolStripMenuItem1_Click);
+            // 
+            // salesToolStripMenuItem
+            // 
+            this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
+            this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.salesToolStripMenuItem.Text = "Sales";
             // 
             // AdminDashboard
             // 
@@ -148,14 +125,11 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listOfUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pointOfSalesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listOfInventoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productDeletedListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem activeUserListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inactiveUserListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listOfUsersToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
     }
 }

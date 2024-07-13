@@ -1,4 +1,5 @@
 ﻿using POS_Jave2021.Class;
+using POS_Jave2021.Model;
 using POS_Jave2021.View.Cashier;
 using System;
 using System.Collections.Generic;
@@ -58,7 +59,18 @@ namespace POS_Jave2021.View.Admin
         {
             Inventory frm = new Inventory(_userDetails, _conn);
             frm.Show();
-            this.Hide();
+        }
+
+        private void listOfUsersToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ListOfUsers frm = new ListOfUsers(_userDetails, _conn);
+            frm.Show();
+        }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewUsers frm =  new AddNewUsers(_userDetails, _conn, new userModel());
+            frm.Show();
         }
     }
 }

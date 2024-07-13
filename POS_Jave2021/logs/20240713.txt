@@ -102,3 +102,21 @@
 20240713-154708 : 20240513075808 - admin12 - getSaleINV....end
 20240713-154708 : 20240513075808 - admin12 - getShiftIN....wait
 20240713-154708 : 20240513075808 - admin12 - getShiftIN....end
+20240713-164332 : Login Successfully.....
+20240713-164332 : USER JSON : [{"ID":13,"user_id":"20240513075808","username":"admin12","password":"123456","lastname":"lupango","firstname":"jave","middlename":"t","phone_no":"09264003047","email":"lupangojave@gmail.com","usertype":1,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-164519 : Login Successfully.....
+20240713-164519 : USER JSON : [{"ID":13,"user_id":"20240513075808","username":"admin12","password":"123456","lastname":"lupango","firstname":"jave","middlename":"t","phone_no":"09264003047","email":"lupangojave@gmail.com","usertype":1,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-164732 : Login Successfully.....
+20240713-164732 : USER JSON : [{"ID":13,"user_id":"20240513075808","username":"admin12","password":"123456","lastname":"lupango","firstname":"jave","middlename":"t","phone_no":"09264003047","email":"lupangojave@gmail.com","usertype":1,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-164936 : Login Successfully.....
+20240713-164936 : USER JSON : [{"ID":13,"user_id":"20240513075808","username":"admin12","password":"123456","lastname":"lupango","firstname":"jave","middlename":"t","phone_no":"09264003047","email":"lupangojave@gmail.com","usertype":1,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-165559 : Login Successfully.....
+20240713-165559 : USER JSON : [{"ID":15,"user_id":"20240713045020","username":"jave12","password":"123456","lastname":"Lupango","firstname":"Jave","middlename":"T","phone_no":"123","email":"luapngp@sdf.com","usertype":0,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-165615 : USER Shift CashOnHand : {"ID":0,"user_id":"20240713045020","shift_date":"07/13/2024","shift_amount":123000.0,"is_balance":false,"disbalance_amount":0.0,"total_void_sales":0.0,"assist_by":null}
+20240713-165631 : 20240713045020 - jave12 - POS Ready!!
+20240713-165635 : 20240713045020 - jave12 - SCAN PRODUCTID : 4800011132945
+20240713-165638 : 20240713045020 - jave12 - Catch : No Item Found!
+20240713-165642 : 20240713045020 - jave12 - SCAN PRODUCTID : 8850007011187
+20240713-165645 : 20240713045020 - jave12 - Catch : No Item Found!
+20240713-165653 : 20240713045020 - jave12 - SCAN PRODUCTID : 4802288301086
+20240713-165655 : 20240713045020 - jave12 - Catch : No Item Found!

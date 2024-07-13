@@ -93,6 +93,8 @@ namespace POS_Jave2021
 
         private void button11_Click(object sender, EventArgs e)
         {
+            //groupBox6.Enabled = false;
+            //groupBox5.Enabled = true;
             try
             {
                 string retpass = passwordHash.encryptor(txt_confirmpassword.Text.Trim());

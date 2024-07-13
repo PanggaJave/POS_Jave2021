@@ -14,18 +14,14 @@ using System.Windows.Forms;
 namespace POS_Jave2021
 {
     public class UserRegistration
-    {
-        
+    {        
         public ResponseModel register(userModel model, OleDbConnection conn)
         {
-
             try
             {
 
                 string query = "INSERT INTO [tbl_users] (user_id, username, [password], lastname, firstname, middlename, phone_no, email, usertype, auth_factor, is_active, is_deleted) " +
                "VALUES (@user_id, @username, @password, @lastname, @firstname, @middlename, @phone_no, @email, @usertype, @auth_factor, @is_active, @is_deleted)";
-
-
 
                 using (OleDbCommand command = new OleDbCommand(query, conn))
                 {
@@ -78,6 +74,30 @@ namespace POS_Jave2021
                     is_Success = false,
                     message = ex.Message
                 };
+            }
+        }
+
+        public static DataTable getListOfUser(OleDbConnection _conn)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string query = "Select user_id, username, lastname, firstname, middlename, email, phone, usertype from [tbl_users]";
+                using (OleDbCommand command = new OleDbCommand(query, _conn))
+                {
+                    _conn.Open();
+                    command.Parameters.AddWithValue("@is_active", true);
+                    command.Parameters.AddWithValue("@is_deleted", false);
+                    OleDbDataAdapter da = new OleDbDataAdapter(command);
+                    da.Fill(dt);
+                    _conn.Close();
+                }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
     }
