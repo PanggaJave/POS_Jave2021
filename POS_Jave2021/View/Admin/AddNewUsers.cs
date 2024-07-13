@@ -19,12 +19,14 @@ namespace POS_Jave2021.View.Admin
         DataTable _userDetails;
         userModel _userModel = new userModel();
         UserRegistration _service = new UserRegistration();
+        public string _backString;
         
         public AddNewUsers(DataTable userDetails, OleDbConnection conn, userModel model, string backString)
         {
             _conn = conn;
             _userDetails = userDetails;
             _userModel = model;
+            _backString = backString;
             InitializeComponent();
         }
 
@@ -126,6 +128,23 @@ namespace POS_Jave2021.View.Admin
                 txt_confirmpassword.UseSystemPasswordChar = false;
                 button16.Text = "Hide";
             }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            groupBox7.Enabled = false;
+            groupBox6.Enabled = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BackClass.action(_userDetails, _conn, _backString);
+            this.Hide();
+        }
+
+        private void AddNewUsers_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

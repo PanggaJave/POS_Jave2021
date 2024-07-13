@@ -104,6 +104,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\BackClass.cs" />
     <Compile Include="Class\connectionClass.cs" />
     <Compile Include="Class\formLoad.cs" />
     <Compile Include="Class\InventoryClass.cs" />
@@ -144,6 +145,12 @@
     </Compile>
     <Compile Include="View\Admin\ListOfUsers.Designer.cs">
       <DependentUpon>ListOfUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\SalesInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\SalesInventory.Designer.cs">
+      <DependentUpon>SalesInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Cashier\AddUpdateInventory.cs">
       <SubType>Form</SubType>
@@ -215,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Admin\ListOfUsers.resx">
       <DependentUpon>ListOfUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\SalesInventory.resx">
+      <DependentUpon>SalesInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Cashier\AddUpdateInventory.resx">
       <DependentUpon>AddUpdateInventory.cs</DependentUpon>

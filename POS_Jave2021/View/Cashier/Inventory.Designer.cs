@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnSearchInv = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvInvList = new System.Windows.Forms.DataGridView();
@@ -39,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.txtSearchProduct = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -48,7 +48,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnBack);
             this.groupBox1.Controls.Add(this.btnSearchInv);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dgvInvList);
@@ -59,6 +59,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inventory";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(6, 563);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(173, 38);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.Text = "Back To Cashier";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnSearchInv
             // 
@@ -166,16 +176,6 @@
             this.txtSearchProduct.TextChanged += new System.EventHandler(this.txtSearchProduct_TextChanged);
             this.txtSearchProduct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchProduct_KeyDown);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 563);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 38);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Back To Cashier";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +210,6 @@
         private System.Windows.Forms.DataGridView dgvProductList;
         private System.Windows.Forms.TextBox txtSearchProduct;
         private System.Windows.Forms.Button btnAddProduct;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

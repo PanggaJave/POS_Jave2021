@@ -25,13 +25,15 @@ namespace POS_Jave2021.View.Cashier
         DataTable _searchInvData;
         DataTable _searchProductData;
         bool dtgribBTN = false;
-        public Inventory(DataTable userDetails, OleDbConnection conn)
+        string _backString;
+        public Inventory(DataTable userDetails, OleDbConnection conn, string backString)
         {
             InitializeComponent();
             _userDetails = userDetails;
             _conn = conn;
             _invClass = new InventoryClass(_conn);
             _logClass = new logsClass();
+            _backString = backString;
         }
 
         private void Inventory_Load(object sender, EventArgs e)
@@ -67,7 +69,8 @@ namespace POS_Jave2021.View.Cashier
                     #endregion
                     dtgribBTN = true;
                 }
-                
+
+                btnBack.Text = "Back To " + _backString;
 
                 _invData = _invClass.getlistOfAllInventory();
                 _productData = _invClass.getlistOfProductList();
@@ -239,8 +242,9 @@ namespace POS_Jave2021.View.Cashier
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            CashierHome frm = new CashierHome(_userDetails, _conn);
-            frm.Show();
+            //CashierHome frm = new CashierHome(_userDetails, _conn);
+            //frm.Show();
+            BackClass.action(_userDetails, _conn, _backString);
             this.Hide();
         }
     }

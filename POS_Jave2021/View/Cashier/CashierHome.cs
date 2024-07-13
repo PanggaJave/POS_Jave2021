@@ -821,7 +821,7 @@ namespace POS_Jave2021.View
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            Inventory frm = new Inventory(_userDetails, _conn);
+            Inventory frm = new Inventory(_userDetails, _conn, this.Text);
             frm.Show();
             this.Hide();
         }

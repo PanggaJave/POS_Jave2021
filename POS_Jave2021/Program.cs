@@ -1,6 +1,7 @@
 ﻿using POS_Jave2021.Class;
 using POS_Jave2021.Model;
 using POS_Jave2021.View;
+using POS_Jave2021.View.Admin;
 using POS_Jave2021.View.Cashier;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,6 @@ namespace POS_Jave2021
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
 
-
             //var conn = connectionClass.connect();
             //var model = new userModel
             //{
@@ -32,7 +32,7 @@ namespace POS_Jave2021
             //};
             //UserLogin ul = new UserLogin();
             //var dtuser = ul.login(model, conn);
-            //Application.Run(new CashierHome(dtuser, conn));
+            //Application.Run(new SalesInventory(dtuser, conn, null));
             //Application.Run(new Inventory(dtuser, conn)); //ValidateArguments
 
         }

@@ -73,6 +73,7 @@
             this.txt_firstname = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_lastname = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -94,7 +95,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(739, 12);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(353, 622);
+            this.groupBox7.Size = new System.Drawing.Size(353, 511);
             this.groupBox7.TabIndex = 22;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Upload Profile";
@@ -116,6 +117,7 @@
             this.button17.TabIndex = 23;
             this.button17.Text = "BACK";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // pictureBox8
             // 
@@ -555,11 +557,23 @@
             this.txt_lastname.Size = new System.Drawing.Size(320, 26);
             this.txt_lastname.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(754, 529);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(315, 54);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddNewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 631);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -567,6 +581,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewUsers";
             this.Load += new System.EventHandler(this.AddNewUsers_Load);
+            this.Leave += new System.EventHandler(this.AddNewUsers_Leave);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -627,5 +642,6 @@
         private System.Windows.Forms.TextBox txt_firstname;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_lastname;
+        private System.Windows.Forms.Button button1;
     }
 }

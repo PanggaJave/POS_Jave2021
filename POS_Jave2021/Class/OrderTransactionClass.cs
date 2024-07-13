@@ -150,6 +150,64 @@ namespace POS_Jave2021.Class
             }
         }
 
+        public DataTable getTransactionDetails(string posID)
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT " +
+                " PD.item_id AS ID, " +
+                " PD.item_name AS ItemName, " +
+                " PD.item_description AS ItemDescription, " +
+                " I.price_cost AS PriceCost, " +
+                " I.selling_price AS SellingPrice " +
+                " FROM [tbl_inv_sold] AS I " +
+                " INNER JOIN [tbl_products] AS PD ON (I.product_id = PD.item_id) " +
+                " WHERE I.transaction_id = @pos_id";
+            using (OleDbCommand command = new OleDbCommand(query, _conn))
+            {
+                _conn.Open(); 
+                command.Parameters.AddWithValue("@pos_id", posID);
+                OleDbDataAdapter da = new OleDbDataAdapter(command);
+                da.Fill(dt);
+                _conn.Close();
+            }
+                return dt;
+        }
+
+        public DataTable getPOSlist(DateTime from , DateTime to, bool isVoid, bool isCredit)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string query = "SELECT " +
+                    " * FROM [tbl_pos] WHERE is_void = @isVoid AND is_debt_credit = @isCredit AND " +
+                    " tdt BETWEEN @from and @to";
+                if(!isVoid && !isCredit)
+                {
+                    query = "SELECT " +
+                    " * FROM [tbl_pos] WHERE " +
+                    " tdt BETWEEN @from and @to";
+                }
+                using (OleDbCommand command = new OleDbCommand(query, _conn))
+                {
+                    _conn.Open();
+                    if(isVoid || isCredit)
+                    {
+                        command.Parameters.AddWithValue("@isVoid", isVoid);
+                        command.Parameters.AddWithValue("@isCredit", isCredit);
+                    }
+                    command.Parameters.AddWithValue("@from", from.ToString("MM/dd/yyyy"));
+                    command.Parameters.AddWithValue("@to", to.ToString("MM/dd/yyyy"));
+                    OleDbDataAdapter da = new OleDbDataAdapter(command);
+                    da.Fill(dt);
+                    _conn.Close();
+                }
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public void DeductInvStock(string productID)
         {
             try

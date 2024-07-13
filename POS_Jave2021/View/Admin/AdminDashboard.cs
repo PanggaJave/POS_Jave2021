@@ -57,19 +57,28 @@ namespace POS_Jave2021.View.Admin
 
         private void listOfInventoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Inventory frm = new Inventory(_userDetails, _conn);
+            Inventory frm = new Inventory(_userDetails, _conn, this.Text);
             frm.Show();
+            this.Hide();
         }
 
         private void listOfUsersToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ListOfUsers frm = new ListOfUsers(_userDetails, _conn);
+            ListOfUsers frm = new ListOfUsers(_userDetails, _conn, this.Text);
             frm.Show();
+            this.Hide();
         }
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddNewUsers frm =  new AddNewUsers(_userDetails, _conn, new userModel());
+            AddNewUsers frm =  new AddNewUsers(_userDetails, _conn, new userModel(), this.Text);
+            frm.Show();
+            this.Hide();
+        }
+
+        private void salesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesInventory frm = new SalesInventory(_userDetails, _conn, this.Text);
             frm.Show();
         }
     }

@@ -82,7 +82,7 @@ namespace POS_Jave2021
             try
             {
                 DataTable dt = new DataTable();
-                string query = "Select user_id, username, lastname, firstname, middlename, email, phone, usertype from [tbl_users]";
+                string query = "Select user_id, username, lastname, firstname, middlename, email, phone_no, usertype from [tbl_users]";
                 using (OleDbCommand command = new OleDbCommand(query, _conn))
                 {
                     _conn.Open();
