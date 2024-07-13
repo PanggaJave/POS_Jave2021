@@ -1,4 +1,5 @@
 ﻿using POS_Jave2021.Class;
+using POS_Jave2021.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,13 +46,21 @@ namespace POS_Jave2021.View.Cashier
                     btn.UseColumnTextForButtonValue = true;
                     btn.DisplayIndex = 0;
 
-                    //DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
-                    //dgvProductList.Columns.Add(btn1); // .Columns.Add(btn);
-                    //btn1.HeaderText = "Option";
-                    //btn1.Text = "View";
-                    //btn1.Name = "btnClick";
-                    //btn1.UseColumnTextForButtonValue = true;
-                    //btn1.DisplayIndex = 0;
+                    DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
+                    dgvProductList.Columns.Add(btn1); // .Columns.Add(btn);
+                    btn1.HeaderText = "Option";
+                    btn1.Text = "Select";
+                    btn1.Name = "btnClick";
+                    btn1.UseColumnTextForButtonValue = true;
+                    btn1.DisplayIndex = 0;
+
+                    //DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
+                    //dgvProductList.Columns.Add(btn2); // .Columns.Add(btn);
+                    //btn2.HeaderText = "Delete";
+                    //btn2.Text = "Delete";
+                    //btn2.Name = "btnClick";
+                    //btn2.UseColumnTextForButtonValue = true;
+
                     #endregion
                     dtgribBTN = true;
                 }
@@ -142,5 +151,30 @@ namespace POS_Jave2021.View.Cashier
         {
             //btnSearchInv_Click(null, null);
         }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            var frm = new AddUpdateProductDetails(_conn, new ProductDetails(), false);
+            frm.ShowDialog();
+            Inventory_Load(null, null);
+        }
+
+        private void dgvProductList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var model = new ProductDetails();
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                var id = dgvProductList.Rows[e.RowIndex].Cells["item_id"].Value.ToString();
+                model.item_id = id;
+                model.item_name = dgvProductList.Rows[e.RowIndex].Cells["item_name"].Value.ToString();
+                model.item_description = dgvProductList.Rows[e.RowIndex].Cells["item_description"].Value.ToString();
+                model.item_catigory = Int32.Parse(dgvProductList.Rows[e.RowIndex].Cells["item_catigory"].Value.ToString());
+                var frm = new AddUpdateProductDetails(_conn, model, true);
+                frm.ShowDialog();
+                Inventory_Load(null, null);
+            }
+         }
     }
 }

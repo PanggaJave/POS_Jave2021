@@ -111,6 +111,7 @@
     <Compile Include="Class\OrderTransactionClass.cs" />
     <Compile Include="Class\passwordHash.cs" />
     <Compile Include="Class\passwordValidator.cs" />
+    <Compile Include="Class\ProductClass.cs" />
     <Compile Include="Class\shiftstart.cs" />
     <Compile Include="Class\UserLogin.cs" />
     <Compile Include="Class\UserRegistration.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Model\customOrderLayoutModel.cs" />
     <Compile Include="Model\InventoryModel.cs" />
     <Compile Include="Model\PosModel.cs" />
+    <Compile Include="Model\ProductDetails.cs" />
     <Compile Include="Model\ResponseModel.cs" />
     <Compile Include="Model\shiftmodel.cs" />
     <Compile Include="Model\shiftOffModel.cs" />
@@ -130,6 +132,12 @@
     </Compile>
     <Compile Include="View\Cashier\AddUpdateInventory.Designer.cs">
       <DependentUpon>AddUpdateInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cashier\AddUpdateProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cashier\AddUpdateProductDetails.Designer.cs">
+      <DependentUpon>AddUpdateProductDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Cashier\AdminCredential.cs">
       <SubType>Form</SubType>
@@ -177,6 +185,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\Cashier\AddUpdateInventory.resx">
       <DependentUpon>AddUpdateInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cashier\AddUpdateProductDetails.resx">
+      <DependentUpon>AddUpdateProductDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Cashier\AdminCredential.resx">
       <DependentUpon>AdminCredential.cs</DependentUpon>

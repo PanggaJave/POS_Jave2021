@@ -34,11 +34,11 @@
             this.dgvInvList = new System.Windows.Forms.DataGridView();
             this.txtSearchInv = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAddProduct = new System.Windows.Forms.Button();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.txtSearchProduct = new System.Windows.Forms.TextBox();
-            this.btnAddProduct = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -112,6 +112,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Product Details";
             // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.Location = new System.Drawing.Point(563, 565);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(104, 38);
+            this.btnAddProduct.TabIndex = 5;
+            this.btnAddProduct.Text = "Add";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
             // btnSearchProduct
             // 
             this.btnSearchProduct.Location = new System.Drawing.Point(329, 22);
@@ -141,6 +151,7 @@
             this.dgvProductList.ReadOnly = true;
             this.dgvProductList.Size = new System.Drawing.Size(661, 488);
             this.dgvProductList.TabIndex = 2;
+            this.dgvProductList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductList_CellContentClick);
             // 
             // txtSearchProduct
             // 
@@ -150,15 +161,6 @@
             this.txtSearchProduct.Size = new System.Drawing.Size(224, 26);
             this.txtSearchProduct.TabIndex = 1;
             this.txtSearchProduct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchProduct_KeyDown);
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.Location = new System.Drawing.Point(563, 565);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(104, 38);
-            this.btnAddProduct.TabIndex = 5;
-            this.btnAddProduct.Text = "Add";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
             // 
             // Inventory
             // 

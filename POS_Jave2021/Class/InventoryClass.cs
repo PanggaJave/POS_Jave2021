@@ -103,10 +103,12 @@ namespace POS_Jave2021.Class
             try
             {
                 DataTable dt = new DataTable();
-                string query = "SELECT * FROM [tbl_products]";
+                string query = "SELECT * FROM [tbl_products] Where is_active =@active and is_deleted = @is_deleted";
                 using (OleDbCommand command = new OleDbCommand(query, _conn))
                 {
                     _conn.Open();
+                    command.Parameters.AddWithValue("@active", true);
+                    command.Parameters.AddWithValue("@is_deleted", false);
                     OleDbDataAdapter da = new OleDbDataAdapter(command);
                     da.Fill(dt);
                     _conn.Close();
