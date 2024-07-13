@@ -109,7 +109,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.22222F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.77778F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel3.Controls.Add(this.Search, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.button1, 2, 0);
@@ -142,7 +142,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(452, 3);
+            this.button1.Location = new System.Drawing.Point(451, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 29);
             this.button1.TabIndex = 2;

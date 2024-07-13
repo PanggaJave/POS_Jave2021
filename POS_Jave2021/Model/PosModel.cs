@@ -32,7 +32,7 @@ namespace POS_Jave2021.Model
 
     public class PosInvSoldModel
     {    
-        public int ProductID { get; set; }
+        public string ProductID { get; set; }
         public decimal Cost { get; set; }
         public decimal Price { get; set; }
         public int QTY { get; set; }

@@ -30,11 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listOfUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pointOfSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listOfInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listOfUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listOfUsersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pointOfSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,13 @@
             this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             // 
+            // listOfInventoryToolStripMenuItem
+            // 
+            this.listOfInventoryToolStripMenuItem.Name = "listOfInventoryToolStripMenuItem";
+            this.listOfInventoryToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.listOfInventoryToolStripMenuItem.Text = "List Of Inventory";
+            this.listOfInventoryToolStripMenuItem.Click += new System.EventHandler(this.listOfInventoryToolStripMenuItem_Click);
+            // 
             // listOfUsersToolStripMenuItem
             // 
             this.listOfUsersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -69,33 +76,26 @@
             this.listOfUsersToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.listOfUsersToolStripMenuItem.Text = "List Of Users";
             // 
-            // pointOfSalesToolStripMenuItem
-            // 
-            this.pointOfSalesToolStripMenuItem.Name = "pointOfSalesToolStripMenuItem";
-            this.pointOfSalesToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
-            this.pointOfSalesToolStripMenuItem.Text = "Point Of Sales";
-            this.pointOfSalesToolStripMenuItem.Click += new System.EventHandler(this.pointOfSalesToolStripMenuItem_Click);
-            // 
-            // listOfInventoryToolStripMenuItem
-            // 
-            this.listOfInventoryToolStripMenuItem.Name = "listOfInventoryToolStripMenuItem";
-            this.listOfInventoryToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.listOfInventoryToolStripMenuItem.Text = "List Of Inventory";
-            this.listOfInventoryToolStripMenuItem.Click += new System.EventHandler(this.listOfInventoryToolStripMenuItem_Click);
-            // 
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.addUserToolStripMenuItem.Text = "Add User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
             // listOfUsersToolStripMenuItem1
             // 
             this.listOfUsersToolStripMenuItem1.Name = "listOfUsersToolStripMenuItem1";
-            this.listOfUsersToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listOfUsersToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
             this.listOfUsersToolStripMenuItem1.Text = "List Of Users";
             this.listOfUsersToolStripMenuItem1.Click += new System.EventHandler(this.listOfUsersToolStripMenuItem1_Click);
+            // 
+            // pointOfSalesToolStripMenuItem
+            // 
+            this.pointOfSalesToolStripMenuItem.Name = "pointOfSalesToolStripMenuItem";
+            this.pointOfSalesToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.pointOfSalesToolStripMenuItem.Text = "Point Of Sales";
+            this.pointOfSalesToolStripMenuItem.Click += new System.EventHandler(this.pointOfSalesToolStripMenuItem_Click);
             // 
             // salesToolStripMenuItem
             // 
@@ -113,6 +113,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.menuStrip1.ResumeLayout(false);

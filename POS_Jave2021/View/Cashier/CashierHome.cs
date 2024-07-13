@@ -355,16 +355,16 @@ namespace POS_Jave2021.View
         {
             if(is_on)
             {
-                pictureBox1.Show();
-                pictureBox2.Show();
+                //pictureBox1.Show();
+                //pictureBox2.Show();
                 pictureBox3.Show();
                 txtPosScreenSearch.Enabled = false;
                 tlp_Controls.Enabled = false;
             }
             else
             {
-                pictureBox1.Hide();
-                pictureBox2.Hide();
+                //pictureBox1.Hide();
+                //pictureBox2.Hide();
                 pictureBox3.Hide();
                 txtPosScreenSearch.Enabled = true;
                 tlp_Controls.Enabled = true;
@@ -643,13 +643,13 @@ namespace POS_Jave2021.View
                 e.RowIndex >= 0)
             {
                 _posInvSoldModel = new PosInvSoldModel();
-                _posInvSoldModel.ProductID = int.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells[2].Value.ToString());
-                _posInvSoldModel.Cost = decimal.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells[3].Value.ToString());
-                _posInvSoldModel.Price = decimal.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells[4].Value.ToString());
-                _posInvSoldModel.tdt = DateTime.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells[5].Value.ToString());
-                _posInvSoldModel.QTY = int.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells[6].Value.ToString());
-                _posInvSoldModel.IsCancel = bool.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells[8].Value.ToString());
-                _posInvSoldModel.Remarks = dgv_salesReportInvSold.Rows[e.RowIndex].Cells[9].Value.ToString();
+                _posInvSoldModel.ProductID = dgv_salesReportInvSold.Rows[e.RowIndex].Cells["product_id"].Value.ToString();
+                _posInvSoldModel.Cost = decimal.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells["price_cost"].Value.ToString());
+                _posInvSoldModel.Price = decimal.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells["selling_price"].Value.ToString());
+                _posInvSoldModel.tdt = DateTime.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells["tdt"].Value.ToString());
+                _posInvSoldModel.QTY = int.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells["qty"].Value.ToString());
+                _posInvSoldModel.IsCancel = bool.Parse(dgv_salesReportInvSold.Rows[e.RowIndex].Cells["is_cancel"].Value.ToString());
+                _posInvSoldModel.Remarks = dgv_salesReportInvSold.Rows[e.RowIndex].Cells["remarks"].Value.ToString();
                 displayInvSoldDetails(_posInvSoldModel);
             }
         }

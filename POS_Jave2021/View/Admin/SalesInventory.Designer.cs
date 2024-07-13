@@ -35,29 +35,29 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.isVoidYes = new System.Windows.Forms.RadioButton();
             this.isVoidNo = new System.Windows.Forms.RadioButton();
+            this.isVoidYes = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.creditToNo = new System.Windows.Forms.RadioButton();
             this.creditToYes = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.totalSalesAmount = new System.Windows.Forms.TextBox();
-            this.totalVoidAmount = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.totalCreditAmount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.totalVoidAmount = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.totalSalesAmount = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.PriceAmount = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cashAmount = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.changeAmount = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.remark = new System.Windows.Forms.RichTextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.NumOfItems = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.remark = new System.Windows.Forms.RichTextBox();
+            this.changeAmount = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cashAmount = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.PriceAmount = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -139,17 +139,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Is Void?";
             // 
-            // isVoidYes
-            // 
-            this.isVoidYes.AutoSize = true;
-            this.isVoidYes.Location = new System.Drawing.Point(84, 19);
-            this.isVoidYes.Name = "isVoidYes";
-            this.isVoidYes.Size = new System.Drawing.Size(58, 24);
-            this.isVoidYes.TabIndex = 0;
-            this.isVoidYes.TabStop = true;
-            this.isVoidYes.Text = "Yes";
-            this.isVoidYes.UseVisualStyleBackColor = true;
-            // 
             // isVoidNo
             // 
             this.isVoidNo.AutoSize = true;
@@ -160,6 +149,17 @@
             this.isVoidNo.TabStop = true;
             this.isVoidNo.Text = "No";
             this.isVoidNo.UseVisualStyleBackColor = true;
+            // 
+            // isVoidYes
+            // 
+            this.isVoidYes.AutoSize = true;
+            this.isVoidYes.Location = new System.Drawing.Point(84, 19);
+            this.isVoidYes.Name = "isVoidYes";
+            this.isVoidYes.Size = new System.Drawing.Size(58, 24);
+            this.isVoidYes.TabIndex = 0;
+            this.isVoidYes.TabStop = true;
+            this.isVoidYes.Text = "Yes";
+            this.isVoidYes.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -213,23 +213,23 @@
             this.groupBox3.Text = "Sub Total";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // label3
+            // totalCreditAmount
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Total Sales Amount";
+            this.totalCreditAmount.Enabled = false;
+            this.totalCreditAmount.Location = new System.Drawing.Point(9, 164);
+            this.totalCreditAmount.Name = "totalCreditAmount";
+            this.totalCreditAmount.Size = new System.Drawing.Size(214, 26);
+            this.totalCreditAmount.TabIndex = 7;
             // 
-            // totalSalesAmount
+            // label5
             // 
-            this.totalSalesAmount.Enabled = false;
-            this.totalSalesAmount.Location = new System.Drawing.Point(9, 56);
-            this.totalSalesAmount.Name = "totalSalesAmount";
-            this.totalSalesAmount.Size = new System.Drawing.Size(214, 26);
-            this.totalSalesAmount.TabIndex = 3;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 141);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(189, 20);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Total Debt Credit Amount";
             // 
             // totalVoidAmount
             // 
@@ -251,23 +251,23 @@
             this.label4.Text = "Total Void Amount";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // totalCreditAmount
+            // totalSalesAmount
             // 
-            this.totalCreditAmount.Enabled = false;
-            this.totalCreditAmount.Location = new System.Drawing.Point(9, 164);
-            this.totalCreditAmount.Name = "totalCreditAmount";
-            this.totalCreditAmount.Size = new System.Drawing.Size(214, 26);
-            this.totalCreditAmount.TabIndex = 7;
+            this.totalSalesAmount.Enabled = false;
+            this.totalSalesAmount.Location = new System.Drawing.Point(9, 56);
+            this.totalSalesAmount.Name = "totalSalesAmount";
+            this.totalSalesAmount.Size = new System.Drawing.Size(214, 26);
+            this.totalSalesAmount.TabIndex = 3;
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 141);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 20);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Total Debt Credit Amount";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Total Sales Amount";
             // 
             // groupBox4
             // 
@@ -289,59 +289,24 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Details";
             // 
-            // PriceAmount
+            // remark
             // 
-            this.PriceAmount.Enabled = false;
-            this.PriceAmount.Location = new System.Drawing.Point(10, 49);
-            this.PriceAmount.Name = "PriceAmount";
-            this.PriceAmount.Size = new System.Drawing.Size(211, 26);
-            this.PriceAmount.TabIndex = 5;
+            this.remark.Enabled = false;
+            this.remark.Location = new System.Drawing.Point(11, 269);
+            this.remark.Name = "remark";
+            this.remark.Size = new System.Drawing.Size(212, 96);
+            this.remark.TabIndex = 13;
+            this.remark.Text = "";
             // 
-            // label6
+            // label10
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Total Price Amount";
-            // 
-            // cashAmount
-            // 
-            this.cashAmount.Enabled = false;
-            this.cashAmount.Location = new System.Drawing.Point(9, 101);
-            this.cashAmount.Name = "cashAmount";
-            this.cashAmount.Size = new System.Drawing.Size(212, 26);
-            this.cashAmount.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 78);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 20);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Cash Amount";
-            // 
-            // changeAmount
-            // 
-            this.changeAmount.Enabled = false;
-            this.changeAmount.Location = new System.Drawing.Point(9, 156);
-            this.changeAmount.Name = "changeAmount";
-            this.changeAmount.Size = new System.Drawing.Size(213, 26);
-            this.changeAmount.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(7, 133);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 20);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Change Amount";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(9, 237);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 20);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Remarks";
             // 
             // NumOfItems
             // 
@@ -361,24 +326,59 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Number Of Items";
             // 
-            // label10
+            // changeAmount
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(9, 237);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 20);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Remarks";
+            this.changeAmount.Enabled = false;
+            this.changeAmount.Location = new System.Drawing.Point(9, 156);
+            this.changeAmount.Name = "changeAmount";
+            this.changeAmount.Size = new System.Drawing.Size(213, 26);
+            this.changeAmount.TabIndex = 9;
             // 
-            // remark
+            // label8
             // 
-            this.remark.Enabled = false;
-            this.remark.Location = new System.Drawing.Point(11, 269);
-            this.remark.Name = "remark";
-            this.remark.Size = new System.Drawing.Size(212, 96);
-            this.remark.TabIndex = 13;
-            this.remark.Text = "";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(7, 133);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 20);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Change Amount";
+            // 
+            // cashAmount
+            // 
+            this.cashAmount.Enabled = false;
+            this.cashAmount.Location = new System.Drawing.Point(9, 101);
+            this.cashAmount.Name = "cashAmount";
+            this.cashAmount.Size = new System.Drawing.Size(212, 26);
+            this.cashAmount.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 20);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Cash Amount";
+            // 
+            // PriceAmount
+            // 
+            this.PriceAmount.Enabled = false;
+            this.PriceAmount.Location = new System.Drawing.Point(10, 49);
+            this.PriceAmount.Name = "PriceAmount";
+            this.PriceAmount.Size = new System.Drawing.Size(211, 26);
+            this.PriceAmount.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(143, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Total Price Amount";
             // 
             // dataGridView1
             // 
@@ -408,6 +408,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvSales);
             this.Name = "SalesInventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SalesInventory";
             this.Load += new System.EventHandler(this.SalesInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).EndInit();

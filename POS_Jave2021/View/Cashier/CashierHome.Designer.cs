@@ -51,10 +51,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbl_ordersCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dt_orderlist = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPosScreenSearch = new System.Windows.Forms.TextBox();
             this.dt_productlist = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -137,10 +135,8 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_orderlist)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_productlist)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControlCashierReport.SuspendLayout();
@@ -163,14 +159,10 @@
             // 
             // btn_refresh
             // 
-            btn_refresh.BackgroundImage = global::POS_Jave2021.Properties.Resources.png_clipart_computer_icons_synchronization_refresh_miscellaneous_leaf_thumbnail;
-            btn_refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            btn_refresh.Location = new System.Drawing.Point(1488, 3);
+            btn_refresh.Location = new System.Drawing.Point(0, 0);
             btn_refresh.Name = "btn_refresh";
-            btn_refresh.Size = new System.Drawing.Size(34, 26);
-            btn_refresh.TabIndex = 10;
-            btn_refresh.UseVisualStyleBackColor = true;
-            btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            btn_refresh.Size = new System.Drawing.Size(75, 23);
+            btn_refresh.TabIndex = 0;
             // 
             // CashierTab
             // 
@@ -401,7 +393,6 @@
             // 
             this.groupBox2.Controls.Add(this.lbl_ordersCount);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.dt_orderlist);
             this.groupBox2.Location = new System.Drawing.Point(953, 13);
             this.groupBox2.Name = "groupBox2";
@@ -430,16 +421,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "TOTAL  : ";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::POS_Jave2021.Properties.Resources.loading1;
-            this.pictureBox2.Location = new System.Drawing.Point(235, 230);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(171, 145);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // dt_orderlist
             // 
             this.dt_orderlist.AllowUserToAddRows = false;
@@ -456,7 +437,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txtPosScreenSearch);
             this.groupBox1.Controls.Add(this.dt_productlist);
             this.groupBox1.Location = new System.Drawing.Point(7, 13);
@@ -465,16 +445,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product Inventory List";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::POS_Jave2021.Properties.Resources.loading2;
-            this.pictureBox1.Location = new System.Drawing.Point(247, 133);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(396, 136);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // txtPosScreenSearch
             // 
@@ -601,12 +571,10 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::POS_Jave2021.Properties.Resources.loading2;
             this.pictureBox3.Location = new System.Drawing.Point(225, 285);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(397, 147);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
             // 
             // label29
@@ -849,7 +817,7 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.63235F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.36765F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel11.Controls.Add(this.label23, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.label19, 0, 2);
             this.tableLayoutPanel11.Controls.Add(this.label22, 0, 1);
@@ -947,7 +915,7 @@
             this.lbl_posTDT.AutoSize = true;
             this.lbl_posTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posTDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posTDT.Location = new System.Drawing.Point(389, 0);
+            this.lbl_posTDT.Location = new System.Drawing.Point(388, 0);
             this.lbl_posTDT.Name = "lbl_posTDT";
             this.lbl_posTDT.Size = new System.Drawing.Size(18, 20);
             this.lbl_posTDT.TabIndex = 15;
@@ -958,7 +926,7 @@
             this.lbl_posIsCancel.AutoSize = true;
             this.lbl_posIsCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posIsCancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posIsCancel.Location = new System.Drawing.Point(389, 28);
+            this.lbl_posIsCancel.Location = new System.Drawing.Point(388, 28);
             this.lbl_posIsCancel.Name = "lbl_posIsCancel";
             this.lbl_posIsCancel.Size = new System.Drawing.Size(18, 20);
             this.lbl_posIsCancel.TabIndex = 17;
@@ -991,7 +959,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label26.Location = new System.Drawing.Point(217, 0);
+            this.label26.Location = new System.Drawing.Point(216, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(86, 20);
             this.label26.TabIndex = 10;
@@ -1002,7 +970,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(217, 28);
+            this.label27.Location = new System.Drawing.Point(216, 28);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(75, 20);
             this.label27.TabIndex = 11;
@@ -1013,7 +981,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label25.Location = new System.Drawing.Point(217, 58);
+            this.label25.Location = new System.Drawing.Point(216, 58);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(107, 20);
             this.label25.TabIndex = 19;
@@ -1024,7 +992,7 @@
             this.lbl_posIsDeptCredit.AutoSize = true;
             this.lbl_posIsDeptCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posIsDeptCredit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posIsDeptCredit.Location = new System.Drawing.Point(389, 58);
+            this.lbl_posIsDeptCredit.Location = new System.Drawing.Point(388, 58);
             this.lbl_posIsDeptCredit.Name = "lbl_posIsDeptCredit";
             this.lbl_posIsDeptCredit.Size = new System.Drawing.Size(18, 20);
             this.lbl_posIsDeptCredit.TabIndex = 20;
@@ -1035,7 +1003,7 @@
             this.adasdasdasdadasd.AutoSize = true;
             this.adasdasdasdadasd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adasdasdasdadasd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.adasdasdasdadasd.Location = new System.Drawing.Point(217, 95);
+            this.adasdasdasdadasd.Location = new System.Drawing.Point(216, 95);
             this.adasdasdasdadasd.Name = "adasdasdasdadasd";
             this.adasdasdasdadasd.Size = new System.Drawing.Size(64, 20);
             this.adasdasdasdadasd.TabIndex = 21;
@@ -1047,7 +1015,7 @@
             this.lbl_posUserID.AutoSize = true;
             this.lbl_posUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_posUserID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_posUserID.Location = new System.Drawing.Point(389, 95);
+            this.lbl_posUserID.Location = new System.Drawing.Point(388, 95);
             this.lbl_posUserID.Name = "lbl_posUserID";
             this.lbl_posUserID.Size = new System.Drawing.Size(18, 20);
             this.lbl_posUserID.TabIndex = 22;
@@ -1123,7 +1091,7 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.63235F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.36765F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel10.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.label16, 0, 2);
             this.tableLayoutPanel10.Controls.Add(this.label17, 0, 1);
@@ -1184,7 +1152,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(330, 0);
+            this.label18.Location = new System.Drawing.Point(329, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(45, 20);
             this.label18.TabIndex = 7;
@@ -1195,7 +1163,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(330, 70);
+            this.label20.Location = new System.Drawing.Point(329, 70);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(79, 20);
             this.label20.TabIndex = 9;
@@ -1206,7 +1174,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(330, 33);
+            this.label21.Location = new System.Drawing.Point(329, 33);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(86, 20);
             this.label21.TabIndex = 10;
@@ -1239,7 +1207,7 @@
             this.lblInvSold_QTY.AutoSize = true;
             this.lblInvSold_QTY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInvSold_QTY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInvSold_QTY.Location = new System.Drawing.Point(502, 0);
+            this.lblInvSold_QTY.Location = new System.Drawing.Point(501, 0);
             this.lblInvSold_QTY.Name = "lblInvSold_QTY";
             this.lblInvSold_QTY.Size = new System.Drawing.Size(18, 20);
             this.lblInvSold_QTY.TabIndex = 13;
@@ -1250,7 +1218,7 @@
             this.lblInvSold_TDT.AutoSize = true;
             this.lblInvSold_TDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInvSold_TDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInvSold_TDT.Location = new System.Drawing.Point(502, 33);
+            this.lblInvSold_TDT.Location = new System.Drawing.Point(501, 33);
             this.lblInvSold_TDT.Name = "lblInvSold_TDT";
             this.lblInvSold_TDT.Size = new System.Drawing.Size(18, 20);
             this.lblInvSold_TDT.TabIndex = 14;
@@ -1261,7 +1229,7 @@
             this.lblInvSold_IsCancel.AutoSize = true;
             this.lblInvSold_IsCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInvSold_IsCancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInvSold_IsCancel.Location = new System.Drawing.Point(502, 70);
+            this.lblInvSold_IsCancel.Location = new System.Drawing.Point(501, 70);
             this.lblInvSold_IsCancel.Name = "lblInvSold_IsCancel";
             this.lblInvSold_IsCancel.Size = new System.Drawing.Size(18, 20);
             this.lblInvSold_IsCancel.TabIndex = 15;
@@ -1409,6 +1377,7 @@
             this.Controls.Add(this.CashierTab);
             this.KeyPreview = true;
             this.Name = "CashierHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cashier DashBoard";
             this.Load += new System.EventHandler(this.CashierHome_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CashierHome_KeyDown);
@@ -1420,11 +1389,9 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_orderlist)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_productlist)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControlCashierReport.ResumeLayout(false);
@@ -1473,8 +1440,6 @@
         private System.Windows.Forms.Button btn_Proceed;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btn_ready;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.RichTextBox rtb_logs;
         private System.Windows.Forms.Label lbl_ordersCount;

@@ -75,6 +75,7 @@
             this.ClientSize = new System.Drawing.Size(645, 361);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Remarks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remarks";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

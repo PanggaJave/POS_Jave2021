@@ -141,13 +141,13 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::POS_Jave2021.Properties.Resources.loading1;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 147);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(315, 232);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
+            //this.pictureBox5.Image = global::POS_Jave2021.Properties.Resources.loading1;
+            //this.pictureBox5.Location = new System.Drawing.Point(15, 147);
+            //this.pictureBox5.Name = "pictureBox5";
+            //this.pictureBox5.Size = new System.Drawing.Size(315, 232);
+            //this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //this.pictureBox5.TabIndex = 20;
+            //this.pictureBox5.TabStop = false;
             // 
             // button13
             // 
