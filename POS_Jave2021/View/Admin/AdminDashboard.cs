@@ -66,7 +66,6 @@ namespace POS_Jave2021.View.Admin
         {
             ListOfUsers frm = new ListOfUsers(_userDetails, _conn, this.Text);
             frm.Show();
-            this.Hide();
         }
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
