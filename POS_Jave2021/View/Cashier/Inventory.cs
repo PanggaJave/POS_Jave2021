@@ -21,6 +21,9 @@ namespace POS_Jave2021.View.Cashier
         DataTable _userDetails;
         DataTable _invData;
         DataTable _productData;
+
+        DataTable _searchInvData;
+        DataTable _searchProductData;
         bool dtgribBTN = false;
         public Inventory(DataTable userDetails, OleDbConnection conn)
         {
@@ -123,6 +126,15 @@ namespace POS_Jave2021.View.Cashier
 
         private void btnSearchProduct_Click(object sender, EventArgs e)
         {
+            var rets = from inv in _productData.AsEnumerable()
+                       where inv.Field<string>("item_id").Trim() == txtSearchProduct.Text.Trim() ||
+                       inv.Field<string>("item_name").Trim() == txtSearchProduct.Text.Trim() ||
+                       inv.Field<string>("Item_description").Trim() == txtSearchProduct.Text.Trim()
+                       select inv;
+            if(rets.Any())
+            {
+                dgvProductList.DataSource = rets.CopyToDataTable();
+            }
         }
 
         private void dgvInvList_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -176,5 +188,60 @@ namespace POS_Jave2021.View.Cashier
                 Inventory_Load(null, null);
             }
          }
+
+        private void txtSearchInv_TextChanged(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(txtSearchInv.Text.Trim()))
+            {
+                dgvInvList.DataSource = _invData;
+            }
+            else
+            {
+                string sd = txtSearchInv.Text.Trim();
+
+                var res = from s in _invData.AsEnumerable()
+                          where s.Field<string>("inv_id").Trim().Contains(sd)
+                          select s; 
+                if(res.Any())
+                {
+                    dgvInvList.DataSource = res.CopyToDataTable();
+                }
+                else
+                {
+                    dgvInvList.DataSource = null;
+                }
+            }
+        }
+
+        private void txtSearchProduct_TextChanged(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(txtSearchProduct.Text.Trim()))
+            {
+                dgvProductList.DataSource = _productData;
+            }
+            else
+            {
+                var rets = from inv in _productData.AsEnumerable()
+                           where inv.Field<string>("item_id").Trim().ToUpper().Contains(txtSearchProduct.Text.Trim().ToUpper()) ||
+                           inv.Field<string>("item_name").Trim().ToUpper().Contains(txtSearchProduct.Text.Trim().ToUpper()) ||
+                           inv.Field<string>("Item_description").ToUpper().Contains(txtSearchProduct.Text.Trim().ToUpper())
+                           select inv;
+                if (rets.Any())
+                {
+                    dgvProductList.DataSource = rets.CopyToDataTable();
+                }
+                else
+                {
+                    dgvProductList.DataSource = null;
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CashierHome frm = new CashierHome(_userDetails, _conn);
+            frm.Show();
+            this.Hide();
+        }
     }
 }

@@ -1,0 +1,104 @@
+20240713-144030 : 20240513081334 - testuser - POS Ready!!
+20240713-144035 : 20240513081334 - testuser - SCAN PRODUCTID : 4800575130302
+20240713-144035 : 20240513081334 - testuser - Product JSON: [{"InvID":"4800575130302","ProductID":"GG20240713143529","Name":"Alaska Condensada","Description":"Alaska Condensada\n370g\n","Price":65.0,"Stocks":100}]
+20240713-144037 : 20240513081334 - testuser - SCAN PRODUCTID : 4800575130302
+20240713-144037 : 20240513081334 - testuser - Product JSON: [{"InvID":"4800575130302","ProductID":"GG20240713143529","Name":"Alaska Condensada","Description":"Alaska Condensada\n370g\n","Price":65.0,"Stocks":100}]
+20240713-144042 : 20240513081334 - testuser - SCAN PRODUCTID : 4800575130302
+20240713-144042 : 20240513081334 - testuser - Product JSON: [{"InvID":"4800575130302","ProductID":"GG20240713143529","Name":"Alaska Condensada","Description":"Alaska Condensada\n370g\n","Price":65.0,"Stocks":100}]
+20240713-144054 : 20240513081334 - testuser - POS Enter Cash Order: Started
+20240713-144101 : 20240513081334 - testuser - Enter Custumer Cash: ₱500.00
+20240713-144101 : 20240513081334 - testuser - Custumer total order: ₱195.00
+20240713-144101 : 20240513081334 - testuser - Custumer Change: ₱305.00
+20240713-144101 : 20240513081334 - testuser - POS Enter Cash Order: Started
+20240713-144122 : 20240513081334 - testuser - POS Orders Transaction: Started
+20240713-144122 : 20240513081334 - testuser - Orders POS: {"ID":0,"pos_id":null,"total_inv":"3","total_price":195.0,"cash":500.0,"change":305.0,"user_id":"20240513081334"}
+20240713-144122 : 20240513081334 - testuser - Orders POS response: {"is_Success":true,"message":"20240713144122","is_catch":false,"title":"Success"}
+20240713-144122 : 20240513081334 - testuser - Orders [tbl_inv_sold] : waiting
+20240713-144122 : 20240513081334 - testuser - Orders [tbl_inv_sold]: {"is_Success":true,"message":"Successfully Inserted","is_catch":false,"title":"Success"}
+20240713-144126 : 20240513081334 - testuser - POS Orders Transaction: End
+20240713-144132 : 20240513081334 - testuser - POS Ready!!
+20240713-144141 : 20240513081334 - testuser - SCAN PRODUCTID : 4800575130302
+20240713-144141 : 20240513081334 - testuser - Product JSON: [{"InvID":"4800575130302","ProductID":"GG20240713143529","Name":"Alaska Condensada","Description":"Alaska Condensada\n370g\n","Price":65.0,"Stocks":100}]
+20240713-144143 : 20240513081334 - testuser - SCAN PRODUCTID : 4806508627215
+20240713-144143 : 20240513081334 - testuser - Product JSON: [{"InvID":"4806508627215","ProductID":"4806508627215","Name":"sardinas","Description":"senorita green","Price":28.0,"Stocks":2000}]
+20240713-144145 : 20240513081334 - testuser - SCAN PRODUCTID : 4806508627222
+20240713-144145 : 20240513081334 - testuser - Product JSON: [{"InvID":"4806508627222","ProductID":"4806508627222","Name":"sardinas","Description":"senoria red","Price":29.0,"Stocks":1500}]
+20240713-144152 : 20240513081334 - testuser - POS Enter Cash Order: Started
+20240713-144157 : 20240513081334 - testuser - Enter Custumer Cash: ₱200.00
+20240713-144157 : 20240513081334 - testuser - Custumer total order: ₱122.00
+20240713-144157 : 20240513081334 - testuser - Custumer Change: ₱78.00
+20240713-144157 : 20240513081334 - testuser - POS Enter Cash Order: Started
+20240713-144200 : 20240513081334 - testuser - POS Orders Transaction: Started
+20240713-144200 : 20240513081334 - testuser - Orders POS: {"ID":0,"pos_id":null,"total_inv":"3","total_price":122.0,"cash":200.0,"change":78.0,"user_id":"20240513081334"}
+20240713-144200 : 20240513081334 - testuser - Orders POS response: {"is_Success":true,"message":"20240713144200","is_catch":false,"title":"Success"}
+20240713-144200 : 20240513081334 - testuser - Orders [tbl_inv_sold] : waiting
+20240713-144200 : 20240513081334 - testuser - Orders [tbl_inv_sold]: {"is_Success":true,"message":"Successfully Inserted","is_catch":false,"title":"Success"}
+20240713-144201 : 20240513081334 - testuser - POS Orders Transaction: End
+20240713-144735 : 20240513081334 - testuser - POS Ready!!
+20240713-144737 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144737 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144739 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144739 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144739 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144739 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144740 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144740 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144740 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144740 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144741 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144741 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144741 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144741 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144742 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144742 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144742 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144742 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144743 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144743 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144744 : 20240513081334 - testuser - SCAN PRODUCTID : 1
+20240713-144744 : 20240513081334 - testuser - Product JSON: [{"InvID":"1","ProductID":"1","Name":"milo","Description":"milo 9grams","Price":20.5,"Stocks":310}]
+20240713-144751 : 20240513081334 - testuser - POS Clear Order: Started
+20240713-144752 : 20240513081334 - testuser - Clear Orders......
+20240713-144758 : 20240513081334 - testuser - Remarks : asdasdadasdadadadadadadasdasd
+
+20240713-144758 : 20240513081334 - testuser - POS Clear Order: End
+20240713-144815 : 20240513081334 - testuser - SCAN PRODUCTID : 4806508627222
+20240713-144815 : 20240513081334 - testuser - Product JSON: [{"InvID":"4806508627222","ProductID":"4806508627222","Name":"sardinas","Description":"senoria red","Price":29.0,"Stocks":1499}]
+20240713-144841 : 20240513081334 - testuser - POS Orders Transaction: Started
+20240713-144841 : 20240513081334 - testuser - Orders POS: {"ID":0,"pos_id":null,"total_inv":"1","total_price":29.0,"cash":0.0,"change":0.0,"user_id":"20240513081334"}
+20240713-144841 : 20240513081334 - testuser - Orders POS response: {"is_Success":true,"message":"20240713144841","is_catch":false,"title":"Success"}
+20240713-144841 : 20240513081334 - testuser - Orders [tbl_inv_sold] : waiting
+20240713-144841 : 20240513081334 - testuser - Orders [tbl_inv_sold]: {"is_Success":true,"message":"Successfully Inserted","is_catch":false,"title":"Success"}
+20240713-144843 : 20240513081334 - testuser - POS Orders Transaction: End
+20240713-145009 : 20240513081334 - testuser - Cashier window 2 is open...
+20240713-145009 : 20240513081334 - testuser - getSaleINV....wait
+20240713-145009 : 20240513081334 - testuser - getSaleINV....end
+20240713-145009 : 20240513081334 - testuser - getSalePOS....wait
+20240713-145009 : 20240513081334 - testuser - getSaleINV....end
+20240713-145009 : 20240513081334 - testuser - getShiftIN....wait
+20240713-145009 : 20240513081334 - testuser - getShiftIN....end
+20240713-154052 : Login Successfully.....
+20240713-154052 : USER JSON : [{"ID":13,"user_id":"20240513075808","username":"admin12","password":"123456","lastname":"lupango","firstname":"jave","middlename":"t","phone_no":"09264003047","email":"lupangojave@gmail.com","usertype":1,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-154108 : Login Successfully.....
+20240713-154108 : USER JSON : [{"ID":13,"user_id":"20240513075808","username":"admin12","password":"123456","lastname":"lupango","firstname":"jave","middlename":"t","phone_no":"09264003047","email":"lupangojave@gmail.com","usertype":1,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-154310 : Login Successfully.....
+20240713-154311 : USER JSON : [{"ID":13,"user_id":"20240513075808","username":"admin12","password":"123456","lastname":"lupango","firstname":"jave","middlename":"t","phone_no":"09264003047","email":"lupangojave@gmail.com","usertype":1,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-154508 : Login Successfully.....
+20240713-154508 : USER JSON : [{"ID":13,"user_id":"20240513075808","username":"admin12","password":"123456","lastname":"lupango","firstname":"jave","middlename":"t","phone_no":"09264003047","email":"lupangojave@gmail.com","usertype":1,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-154632 : Login Successfully.....
+20240713-154632 : USER JSON : [{"ID":13,"user_id":"20240513075808","username":"admin12","password":"123456","lastname":"lupango","firstname":"jave","middlename":"t","phone_no":"09264003047","email":"lupangojave@gmail.com","usertype":1,"auth_factor":false,"is_active":true,"is_deleted":false}]
+20240713-154654 : USER Shift CashOnHand : {"ID":0,"user_id":"20240513075808","shift_date":"07/13/2024","shift_amount":1000.0,"is_balance":false,"disbalance_amount":0.0,"total_void_sales":0.0,"assist_by":null}
+20240713-154704 : 20240513075808 - admin12 - Cashier window 2 is open...
+20240713-154704 : 20240513075808 - admin12 - getSaleINV....wait
+20240713-154704 : 20240513075808 - admin12 - getSaleINV....end
+20240713-154704 : 20240513075808 - admin12 - getSalePOS....wait
+20240713-154704 : 20240513075808 - admin12 - getSaleINV....end
+20240713-154704 : 20240513075808 - admin12 - getShiftIN....wait
+20240713-154704 : 20240513075808 - admin12 - getShiftIN....end
+20240713-154708 : 20240513075808 - admin12 - Cashier window 2 is open...
+20240713-154708 : 20240513075808 - admin12 - getSaleINV....wait
+20240713-154708 : 20240513075808 - admin12 - getSaleINV....end
+20240713-154708 : 20240513075808 - admin12 - getSalePOS....wait
+20240713-154708 : 20240513075808 - admin12 - getSaleINV....end
+20240713-154708 : 20240513075808 - admin12 - getShiftIN....wait
+20240713-154708 : 20240513075808 - admin12 - getShiftIN....end

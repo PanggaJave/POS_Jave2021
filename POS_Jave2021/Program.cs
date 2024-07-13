@@ -21,20 +21,19 @@ namespace POS_Jave2021
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new pos_main());
+            Application.Run(new Login());
 
 
-            var conn = connectionClass.connect();
-            var model = new userModel
-            {
-                username = "testuser",
-                password = "test12",
-            };
-            UserLogin ul = new UserLogin();
-            var dtuser = ul.login(model, conn);
+            //var conn = connectionClass.connect();
+            //var model = new userModel
+            //{
+            //    username = "testuser",
+            //    password = "test12",
+            //};
+            //UserLogin ul = new UserLogin();
+            //var dtuser = ul.login(model, conn);
             //Application.Run(new CashierHome(dtuser, conn));
-            Application.Run(new Inventory(dtuser, conn)); //ValidateArguments
-            //Application.Run(new ValidateArguments()); //ValidateArguments
+            //Application.Run(new Inventory(dtuser, conn)); //ValidateArguments
 
         }
     }

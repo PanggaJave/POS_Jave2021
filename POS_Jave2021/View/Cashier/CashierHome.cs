@@ -155,7 +155,7 @@ namespace POS_Jave2021.View
             try
             {
                 DataTable ret = _dtInv.AsEnumerable().Where(
-                    w => w.Field<string>("ProductID").Trim()  == id.Trim()).CopyToDataTable();
+                    w => w.Field<string>("InvID").Trim()  == id.Trim()).CopyToDataTable();
 
                 if (ret.Rows.Count > 0)
                 {
@@ -165,7 +165,7 @@ namespace POS_Jave2021.View
                         orderModels = new customOrderLayoutModel
                         {
                             ID = orderID + 1,
-                            InvID = r["ProductID"].ToString(),
+                            InvID = r["InvID"].ToString(),
                             Name = r["Name"].ToString(),
                             QTY = 1,
                             Price = decimal.Parse(r["Price"].ToString()),
@@ -823,6 +823,7 @@ namespace POS_Jave2021.View
         {
             Inventory frm = new Inventory(_userDetails, _conn);
             frm.Show();
+            this.Hide();
         }
     }
     

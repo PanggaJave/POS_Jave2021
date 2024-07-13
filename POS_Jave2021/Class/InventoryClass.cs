@@ -22,7 +22,7 @@ namespace POS_Jave2021.Class
             try
             {
                 DataTable dt = new DataTable();
-                string query = "Select inv.inv_id as ID, inv.product_id as ProductID, pro.item_name as Name, pro.item_description as Description, inv.selling_price as Price, inv.available_inv as Stocks from [tbl_inv] as inv inner join [tbl_products] as pro on inv.product_id = pro.item_id" +
+                string query = "Select inv.inv_id as InvID, inv.product_id as ProductID, pro.item_name as Name, pro.item_description as Description, inv.selling_price as Price, inv.available_inv as Stocks from [tbl_inv] as inv inner join [tbl_products] as pro on inv.product_id = pro.item_id" +
                     " where inv.available_inv > 0";
                 using (OleDbCommand command = new OleDbCommand(query, _conn))
                 {

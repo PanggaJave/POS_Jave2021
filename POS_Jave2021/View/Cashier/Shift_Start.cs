@@ -24,7 +24,7 @@ namespace POS_Jave2021.View.Cashier
         public bool is_status = false;
         private void Shift_Start_Load(object sender, EventArgs e)
         {
-            var userDetails = pos_main.userDetails;
+            var userDetails = Login.userDetails;
             txtShiftName.Text = userDetails.Rows[0]["lastname"].ToString() + ", " + userDetails.Rows[0]["firstname"].ToString();
             txtShiftDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
             txtUserID.Text = userDetails.Rows[0]["user_id"].ToString();
@@ -41,7 +41,7 @@ namespace POS_Jave2021.View.Cashier
                     shift_date = txtShiftDate.Text,
                     shift_amount = decimal.Parse(txtShiftAmount.Text),
                 };
-                shiftstart ss = new shiftstart(pos_main.conn);
+                shiftstart ss = new shiftstart(Login.conn);
                 var res = ss.Insert(model);
                 if(res.is_Success)
                 {

@@ -97,6 +97,43 @@ namespace POS_Jave2021.Class
             }
         }
 
+        public ResponseModel delete(string id)
+        {
+            string query = "UPDATE [tbl_products] SET  is_active = @is_active, is_deleted = @is_deleted, " +
+                " udt = @udt " +
+                " WHERE item_id = @item_id";
+            using (OleDbCommand command = new OleDbCommand(query, _conn))
+            {
+                _conn.Open();
+                command.Parameters.AddWithValue("@is_active", false);
+                command.Parameters.AddWithValue("@is_deleted", true);
+                command.Parameters.AddWithValue("@udt", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                command.Parameters.AddWithValue("@item_id", id.Trim());
+                int rowsAffected = command.ExecuteNonQuery();
+                _conn.Close();
+                if (rowsAffected > 0)
+                {
+                    return new ResponseModel
+                    {
+                        is_catch = false,
+                        is_Success = true,
+                        message = "Deleted Successfully!",
+                        title = "Success!",
+                    };
+                }
+                else
+                {
+                    return new ResponseModel
+                    {
+                        is_catch = false,
+                        is_Success = true,
+                        message = "Deleted Unsuccessfully!",
+                        title = "Error!",
+                    };
+                }
+            }
+        }
+
         public DataTable getProductCategor()
         {
             try

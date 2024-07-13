@@ -129,7 +129,22 @@ namespace POS_Jave2021.View.Cashier
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            DialogResult dr = MessageBox.Show("Are sure you want to delete this item?.", "Confirmation!", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                // Do something
+                var res = _service.delete(txtItemId.Text.Trim());
+                if (res.is_Success)
+                {
+                    MessageBox.Show(res.message, res.title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(res.message, res.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
